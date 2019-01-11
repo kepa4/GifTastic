@@ -25,10 +25,11 @@ $(document).ready(function() {
       url: url,
       dataType: 'json',
       success: function(data) {
-        console.log(data);
+        $('.gifs').empty();
         for(var i = 0; i < 10; i++){
-          $('.gifs').append(`<img src='${data.data[i].images.original.url}' alt='${data.data[i].title}'/>`)  
+          $('.gifs').append(`<div><img src='${data.data[i].images.original.url}' alt='${data.data[i].title}'/><p>rating: ${data.data[i].rating}</p></div>`)  
         }
+        
       },
       error: function(error) {
         console.log(error);

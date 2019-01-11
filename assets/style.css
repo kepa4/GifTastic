@@ -8,6 +8,7 @@
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
+  display: block;
 }
 
 .sidenav button {
@@ -18,6 +19,7 @@
   display: block;
   background-color: #111;
   border: none;
+  display: block;
 }
 
 .sidenav button:hover {
@@ -33,4 +35,28 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav button {font-size: 18px;}
+}
+
+.gifs {
+  position: relative;
+  left: 100px;
+  top: 0px;
+}
+
+.gifs img {
+  display: inline-block;
+  height: 350px;
+  width: 300px;
+}
+
+.gifs p {
+  display: block;
+  font-size: 20px;
+  padding: 15x;
+  text-align: center;
+}
+
+.gifs div {
+  display: inline-block;
+  padding: 20px;
 }
