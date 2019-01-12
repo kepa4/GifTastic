@@ -24,9 +24,7 @@ $(document).ready(function() {
     renderButtons(); 
   });
 
-  // I can get the program to add buttons but for some reason I cant get it to make a ajax call with them
-
-  $('div.buttons button').on('click', function(e) {
+  $(document).on('click', 'div.buttons button', function(e) {
     console.log(e);
     var url =
       'https://api.giphy.com/v1/gifs/search?q=' +
