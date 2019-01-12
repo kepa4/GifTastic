@@ -9,15 +9,27 @@ $(document).ready(function() {
     'Chihuahua',
     'Husky',
   ];
+  renderButtons();
 
-  array.forEach(function(name) {
-    $('.sidenav').append(`<button id=${name}>${name}</button>`);
+  function renderButtons() {
+    $('div.buttons').empty();
+    array.forEach(function(name) {
+      $('div.buttons').append(`<button id=${name}>${name}</button>`);
+    });
+  }
+
+  $('#add').on('click', function(){
+    var word = $('#word').val();
+    array.push(word);
+    renderButtons(); 
   });
 
-  $('button').on('click', function(e) {
+  // I can get the program to add buttons but for some reason I cant get it to make a ajax call with them
+
+  $('div.buttons button').on('click', function(e) {
     console.log(e);
     var url =
-      'http://api.giphy.com/v1/gifs/search?q=' +
+      'https://api.giphy.com/v1/gifs/search?q=' +
       e.target.id +
       '&api_key=o0kDV1eHMdbMcWplc4n285321HyV03He';
     $.ajax({
@@ -33,7 +45,8 @@ $(document).ready(function() {
       },
       error: function(error) {
         console.log(error);
-      },
+      }
     });
   });
+ 
 });

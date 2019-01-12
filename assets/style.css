@@ -22,8 +22,20 @@
   display: block;
 }
 
+.sidenav p { 
+  color: #818181;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.sidenav p:hover {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
 .sidenav button:hover {
   color: #f1f1f1;
+  cursor: pointer;
 }
 
 .main {
@@ -39,7 +51,7 @@
 
 .gifs {
   position: relative;
-  left: 100px;
+  left: 160px;
   top: 0px;
 }
 
